@@ -8,4 +8,6 @@ Rails.application.routes.draw do
     resources :reservations, only: [:index]
   end
 
+  
+  resources :courses, only: [:index, :show, :create, :destroy]
 end
