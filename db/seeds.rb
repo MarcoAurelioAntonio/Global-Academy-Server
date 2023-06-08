@@ -11,3 +11,11 @@ require 'faker'
 100.times do
   User.create(name: Faker::Name.unique.name)
 end
+
+User.all.each do |user|
+  5.times do
+    user.reservations.create
+  end
+end
+
+Course.create(name: "Ruby", description: "Ruby is a dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.", price: 1000, start_date: "2021-06-01", end_date: "2021-06-30")
