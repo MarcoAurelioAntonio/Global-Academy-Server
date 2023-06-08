@@ -17,7 +17,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_08_162612) do
   create_table "courses", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.string "type"
+    t.string "course_type"
     t.decimal "price"
     t.date "start_date"
     t.date "end_date"
