@@ -15,9 +15,8 @@ class CoursesController < ApplicationController
     else
       render json: @new_course.errors, status: :unprocessable_entity
     end
-
   end
-  
+
   def show
     render json: @course
   end
@@ -33,5 +32,5 @@ class CoursesController < ApplicationController
     @course = Course.find(params[:id])
   rescue ActiveRecord::RecordNotFound
     render json: { error: 'Course not found' }, status: :not_found
-    
+  end
 end
