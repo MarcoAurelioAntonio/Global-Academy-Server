@@ -1,7 +1,6 @@
 require 'swagger_helper'
 
 RSpec.describe 'api/v1/reservations', type: :request do
-
   path '/api/v1/users/{user_id}/reservations' do
     # You'll want to customize the parameter types...
     parameter name: 'user_id', in: :path, type: :string, description: 'user_id'
@@ -20,6 +19,10 @@ RSpec.describe 'api/v1/reservations', type: :request do
         run_test!
       end
     end
+  end
+  path '/api/v1/users/{user_id}/reservations' do
+    # You'll want to customize the parameter types...
+    parameter name: 'user_id', in: :path, type: :string, description: 'user_id'
 
     post('create reservation') do
       response(200, 'successful') do
@@ -28,10 +31,10 @@ RSpec.describe 'api/v1/reservations', type: :request do
         parameter name: :reservation, in: :body, schema: {
           type: :object,
           properties: {
-            course_id: { type: :number },
+            course_id: { type: :number }
           },
-        required: [ 'course_id' ]
-      }
+          required: ['course_id']
+        }
 
         after do |example|
           example.metadata[:response][:content] = {
