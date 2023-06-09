@@ -8,14 +8,30 @@
 
 require 'faker'
 
+# Create 100 users
 100.times do
   User.create(name: Faker::Name.unique.name)
 end
 
-User.all.each do |user|
-  5.times do
-    user.reservations.create
-  end
+# Create 5 random courses
+course_id = 1
+5.times do
+  Course.create(
+    id: course_id,
+    name: Faker::ProgrammingLanguage.name,
+    description: Faker::Lorem.sentence,
+    course_type: Faker::Lorem.word,
+    price: Faker::Number.decimal(l_digits: 4, r_digits: 2),
+    start_date: Faker::Date.between(from: '2021-06-01', to: '2021-06-30'),
+    end_date: Faker::Date.between(from: '2021-06-01', to: '2021-06-30')
+  )
+  course_id += 1
 end
 
-Course.create(name: "Ruby", description: "Ruby is a dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.", price: 1000, start_date: "2021-06-01", end_date: "2021-06-30")
+# Create 5 reservations for each user
+User.all.each do |user|
+  5.times do
+    course = Course.all.sample
+    Reservation.create(user_id: user.id, course_id: course.id)
+  end
+end

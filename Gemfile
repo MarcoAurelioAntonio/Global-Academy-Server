@@ -75,8 +75,8 @@ end
 gem 'rubocop', '>= 1.0', '< 2.0'
 
 # Dotenv
-# gem 'dotenv-rails'
-gem 'dotenv'
+gem 'dotenv-rails'
+# gem 'dotenv'
 
 # Faker
 gem 'faker'
