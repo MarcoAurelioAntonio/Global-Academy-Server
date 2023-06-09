@@ -15,13 +15,13 @@ RSpec.describe User, type: :model do
   end
 
   it 'name should be present, expected true' do
-    new_user1 = User.create(name: 'Kender')
+    User.create(name: 'Kender')
     new_user2 = User.new(name: 'Kender')
     expect(new_user2).to be_invalid
     expect(new_user2.errors[:name]).to include('has already been taken')
   end
   it 'name should be present, expected true' do
-    new_user1 = User.create(name: 'Kender')
+    User.create(name: 'Kender')
     new_user2 = User.new(name: 'Nelson')
     expect(new_user2).to be_valid
   end
