@@ -8,17 +8,21 @@ class Api::V1::ReservationsController < ApplicationController
   # POST /reservations
   def create
     @reservation = Reservation.new(reservation_params)
+    @user = User.find(params[:user_id])
+    @reservation.user = @user
     if @reservation.save
       render json: @reservation, status: :created
     else
       render json: @reservation.errors, status: :unprocessable_entity
     end
   rescue ActiveRecord::RecordNotUnique
-    render json: { error: 'You are already enrolled in this course' }, status: :not_found
+    render json: { error: 'You are already enrolled in this course' }, status: :not_acceptable
+  rescue ActiveRecord::RecordNotFound
+    render json: { error: "Couldn't find User" }, status: :not_found
   end
 
   # Only allow a list of trusted parameters through.
   def reservation_params
-    params.require(:reservation).permit(:user_id, :course_id)
+    params.require(:reservation).permit(:course_id)
   end
 end

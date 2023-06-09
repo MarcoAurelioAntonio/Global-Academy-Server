@@ -26,9 +26,21 @@ paths:
                   type: string
                 name:
                   type: string
+                price:
+                  type: number
+                course_type:
+                  type: string
+                start_date:
+                  type: string
+                end_date:
+                  type: string
               required:
               - description
               - name
+              - course_type
+              - price
+              - start_date
+              - end_date
   "/api/v1/courses/{id}":
     parameters:
     - name: id
@@ -62,9 +74,20 @@ paths:
           description: successful
     post:
       summary: create reservation
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                course_id:
+                  type: number
+              required:
+              - course_id
   "/api/v1/users":
     get:
       summary: list users

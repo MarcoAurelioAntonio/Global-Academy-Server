@@ -23,10 +23,10 @@ RSpec.describe 'api/v1/courses', type: :request do
         properties: {
           description: { type: :string },
           name: { type: :string },
-          price: { type: :decimal },
+          price: { type: :number },
           course_type: { type: :string },
-          start_date: { type: :date },
-          end_date: { type: :date }
+          start_date: { type: :string },
+          end_date: { type: :string }
         },
         required: [ 'description', 'name', 'course_type', 'price', 'start_date', 'end_date']
       }

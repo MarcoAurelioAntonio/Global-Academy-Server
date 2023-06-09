@@ -23,7 +23,15 @@ RSpec.describe 'api/v1/reservations', type: :request do
 
     post('create reservation') do
       response(200, 'successful') do
-        let(:user_id) { '123' }
+        consumes 'application/json'
+        produces 'application/json'
+        parameter name: :reservation, in: :body, schema: {
+          type: :object,
+          properties: {
+            course_id: { type: :number },
+          },
+        required: [ 'course_id' ]
+      }
 
         after do |example|
           example.metadata[:response][:content] = {
