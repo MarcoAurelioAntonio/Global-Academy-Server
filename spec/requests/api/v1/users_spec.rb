@@ -16,6 +16,14 @@ RSpec.describe 'api/v1/users', type: :request do
     end
 
     post('create user') do
+      consumes 'application/json'
+        parameter name: :user, in: :body, schema: {
+          type: :object,
+          properties: {
+            name: { type: :string }
+          },
+          required: ['name']
+        }
       response(200, 'successful') do
         after do |example|
           example.metadata[:response][:content] = {
