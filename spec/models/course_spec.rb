@@ -30,4 +30,22 @@ RSpec.describe Course, type: :model do
         expect(subject).to_not be_valid
     end
 
+    it 'the price should be present' do
+        expect(subject).to be_valid
+    end
+
+    it 'the price should be equal or greater than 0' do
+        subject.price = -1
+        expect(subject).to_not be_valid
+    end
+
+    it 'the course_type should be present' do
+        expect(subject).to be_valid
+    end
+
+    it 'the course_type should not be empty' do
+        subject.course_type = ''
+        expect(subject).to_not be_valid
+    end
+
 end
