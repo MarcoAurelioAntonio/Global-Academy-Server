@@ -1,8 +1,8 @@
 class ReservationsController < ApplicationController
   def index
-    @user = User.includes(:reservations).find(params[:user_id])
+    @user = User.includes({reservations: :course}).find(params[:user_id])
     @reservations = @user.reservations
-    render json: JSON.pretty_generate(@reservations.as_json(only: [:created_at]))
+    render json: JSON.pretty_generate(@reservations.as_json)
   end
 
   # POST /reservations
