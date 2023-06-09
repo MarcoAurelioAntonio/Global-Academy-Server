@@ -13,6 +13,8 @@ class ReservationsController < ApplicationController
     else
       render json: @reservation.errors, status: :unprocessable_entity
     end
+  rescue ActiveRecord::RecordNotUnique
+    render json: { error: 'You are already enrolled in this course' }, status: :not_found
   end
 
   # Only allow a list of trusted parameters through.
