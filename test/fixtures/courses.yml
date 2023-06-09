@@ -1,17 +1,26 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  description: MyString
-  type: 
+  name: 'Lorem Ipsum Dolor Sit Amet' 
+  description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit'
+  course_type: 'Web'
   price: 9.99
   start_date: 2023-06-08
-  end_date: 2023-06-08
+  end_date: 2023-06-09
 
 two:
-  name: MyString
-  description: MyString
-  type: 
+ name: 'Lorem Ipsum Dolor Sit Amet 2' 
+ description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit'
+ course_type: 'Web 2'
+ price: 9.99
+ start_date: 2023-06-08
+ end_date: 2023-06-09
+
+three:
+  name: 'Lorem Ipsum Dolor Sit Amet 3' 
+  description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit'
+  course_type: 'Web 3'
   price: 9.99
   start_date: 2023-06-08
-  end_date: 2023-06-08
+  end_date: 2023-06-09
+
