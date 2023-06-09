@@ -1,4 +1,4 @@
-class ReservationsController < ApplicationController
+class Api::V1::ReservationsController < ApplicationController
   def index
     @user = User.includes(reservations: :course).find(params[:user_id])
     @reservations = @user.reservations

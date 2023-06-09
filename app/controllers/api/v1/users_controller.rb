@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class Api::V1::UsersController < ApplicationController
   def index
     @users = User.all.order(:name).limit(10)
     render json: JSON.pretty_generate(@users.as_json)
