@@ -82,3 +82,6 @@ gem 'dotenv-rails'
 
 # Faker
 gem 'faker'
+
+# Rswag
+gem 'rswag'
