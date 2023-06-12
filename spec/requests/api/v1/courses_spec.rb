@@ -68,8 +68,6 @@ RSpec.describe 'api/v1/courses', type: :request do
     parameter name: 'id', in: :path, type: :string, description: 'id'
     delete('delete course') do
       response(200, 'successful') do
-        let(:id) { '123' }
-
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
