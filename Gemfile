@@ -87,5 +87,3 @@ gem 'faker'
 
 # Rswag
 gem 'rswag'
-
-gem 'rack-cors'
