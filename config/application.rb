@@ -14,7 +14,7 @@ module AppointmentServer
     middleware.use Rack::Cors do
       allow do
         origins '*' # Update this with the appropriate origin(s) that should be allowed
-        resource '*', headers: :any, methods: [:get, :post, :options]
+        resource '*', headers: :any, methods: [:get, :post,:delete, :options]
       end
     end
 
