@@ -22,9 +22,9 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   # username: <%= ENV['USERNAME'] %>
   # password: <%= ENV['PASSWORD'] %>
-  # host: 127.0.0.1
-  # username: postgres
-  # password: K@i14969
+  host: 127.0.0.1
+  username: postgres
+  password: K@i14969
 
 development:
   <<: *default
