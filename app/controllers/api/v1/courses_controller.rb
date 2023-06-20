@@ -17,7 +17,8 @@ class Api::V1::CoursesController < ApplicationController
   end
 
   def show
-    render json: @course
+
+    render json: CourseSerializer.new(@course).serializable_hash[:data][:attributes]
   end
 
   def destroy
