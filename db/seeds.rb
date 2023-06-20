@@ -8,30 +8,28 @@
 
 require 'faker'
 
-# Create 100 users
-100.times do
-  User.create(name: Faker::Name.unique.name)
-end
-
-# Create 5 random courses
-course_id = 1
+# Create 5 users
 5.times do
-  Course.create(
-    id: course_id,
-    name: Faker::ProgrammingLanguage.name,
-    description: Faker::Lorem.sentence,
-    course_type: Faker::Lorem.word,
-    price: Faker::Number.decimal(l_digits: 4, r_digits: 2),
-    start_date: Faker::Date.between(from: '2021-06-01', to: '2021-06-30'),
-    end_date: Faker::Date.between(from: '2021-06-01', to: '2021-06-30')
-  )
-  course_id += 1
+  User.create(name: Faker::Name.name)
 end
 
-# Create 5 reservations for each user
+# Create 20 courses
+20.times do
+  Course.create(
+    name: Faker::Educator.course_name,
+    start_date: Faker::Date.between(from: 1.year.ago, to: 1.year.from_now),
+    end_date: Faker::Date.between(from: 1.year.from_now, to: 2.years.from_now),
+    description: Faker::Lorem.characters(number: 30),
+    course_type: Faker::Lorem.word,
+    price: Faker::Number.decimal(l_digits: 2)
+  )
+end
+
+# Create 20 reservations with random users and courses
 User.all.each do |user|
-  5.times do
-    course = Course.all.sample
-    Reservation.create(user_id: user.id, course_id: course.id)
+  courses = Course.all.sample(4)
+  courses.each do |course|
+    next if user.reservations.exists?(course_id: course.id)
+    Reservation.create(user: user, course: course)
   end
 end
