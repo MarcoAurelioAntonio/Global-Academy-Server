@@ -87,3 +87,5 @@ gem 'faker'
 
 # Rswag
 gem 'rswag'
+
+gem 'jsonapi-serializer', '~> 2.2'

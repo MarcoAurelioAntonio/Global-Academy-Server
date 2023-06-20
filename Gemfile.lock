@@ -112,6 +112,8 @@ GEM
     json (2.6.3)
     json-schema (3.0.0)
       addressable (>= 2.8)
+    jsonapi-serializer (2.2.0)
+      activesupport (>= 4.2)
     loofah (2.21.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -292,6 +294,7 @@ DEPENDENCIES
   faker
   importmap-rails
   jbuilder
+  jsonapi-serializer (~> 2.2)
   pg (~> 1.1)
   puma (~> 5.0)
   rack-cors

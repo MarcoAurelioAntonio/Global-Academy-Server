@@ -6,11 +6,14 @@ require "rails/all"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+
 module AppointmentServer
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
+    config.action_controller.asset_host = 'http://localhost:3000'
+    
     middleware.use Rack::Cors do
       allow do
         origins '*' # Update this with the appropriate origin(s) that should be allowed
