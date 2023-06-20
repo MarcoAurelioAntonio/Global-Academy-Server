@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <h3><b>Appointment Server Side</b></h3>
+  <h3><b>Global Academy - Server Side</b></h3>
 
 </div>
 
@@ -31,11 +31,9 @@
 
 # 📖 Hello Rails React <a name="about-project"></a>
 
-**Appointment-Server-Side** Is an app created with the command `rails new Appointment-Server-Side --database=postgresql`. it will do 3 simple tasks.
+**Global Academy - Server-Side**
 
- - Uses postgresql database where different data are saved.
- - .
- - .
+ - In this app, you can book between any of the available courses, and as a user you can not only book, but create a new one so that others can also enjoy.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -77,9 +75,10 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[Uses postgresql database where create the tables design]**
-- **[]**
-- **[]**
+- [ ] **[ERB Design fo the DB tables and relations]**
+- [ ] **[Uses postgresql database where create the tables design]**
+- [ ] **[Models and controlers to configure the API]**
+- [ ] **[API Documentation]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -167,8 +166,9 @@ To run the project, execute the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Add styling]**
 - [ ] **[Add content]**
+- [ ] **[Make sure that the "Add item" and "Delete item" links are accessible only by users who are admins]**
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
