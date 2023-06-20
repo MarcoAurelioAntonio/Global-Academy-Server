@@ -29,9 +29,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Hello Rails React <a name="about-project"></a>
+# 📖 Global Academy <a name="about-project"></a>
 
-**Global Academy - Server-Side**
+**Server-Side**
 
  - In this app, you can book between any of the available courses, and as a user you can not only book, but create a new one so that others can also enjoy.
 
