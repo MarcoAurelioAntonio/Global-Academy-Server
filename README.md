@@ -20,6 +20,7 @@
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
+- [💻 FrontEnd](#front-end)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -86,7 +87,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [This page will not be deployed](https://github.com/MarcoAurelioAntonio/Appointment-Server-Side)
+- This page will not be deployed
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -98,9 +99,17 @@ To get a local copy up and running, follow these steps.
 ### Setup <a name="setup"></a>
 Open the terminal and clone the project
 ```
- git clone git@github.com:MarcoAurelioAntonio/Appointment-Server-Side.git
- cd Appointment-Server-Side
+ git clone git@github.com:MarcoAurelioAntonio/Global-Academy-Server.git
+ cd Global-Academy-Server
 ```
+<!-- LIVE DEMO -->
+
+## 💻 Link to FrontEnd <a name="front-end"></a>
+
+- [Global-Academy-Client](https://github.com/MarcoAurelioAntonio/Global-Academy-Client.git)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ### Prerequisites <a name="prerequisites"></a>
 
@@ -124,7 +133,6 @@ Create Database
 ```
   rails db:create
   rails db:migrate
-  rails db:seed
 ```
 
 ### Usage <a name="usage"></a>
@@ -177,7 +185,7 @@ To run the project, execute the following command:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/MarcoAurelioAntonio/Appointment-Server-Side/issues).
+Feel free to check the [issues page](https://github.com/MarcoAurelioAntonio/Global-Academy-Server/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
