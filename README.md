@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <h3><b>Appointment Server Side</b></h3>
+  <h3><b>Global Academy - Server Side</b></h3>
 
 </div>
 
@@ -20,6 +20,7 @@
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
+- [💻 FrontEnd](#front-end)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -29,13 +30,11 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Hello Rails React <a name="about-project"></a>
+# 📖 Global Academy <a name="about-project"></a>
 
-**Appointment-Server-Side** Is an app created with the command `rails new Appointment-Server-Side --database=postgresql`. it will do 3 simple tasks.
+**Server-Side**
 
- - Uses postgresql database where different data are saved.
- - .
- - .
+ - In this app, you can book between any of the available courses, and as a user you can not only book, but create a new one so that others can also enjoy.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -77,9 +76,10 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[Uses postgresql database where create the tables design]**
-- **[]**
-- **[]**
+- [ ] **[ERB Design fo the DB tables and relations]**
+- [ ] **[Uses postgresql database where create the tables design]**
+- [ ] **[Models and controlers to configure the API]**
+- [ ] **[API Documentation]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -87,7 +87,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [This page will not be deployed](https://github.com/MarcoAurelioAntonio/Appointment-Server-Side)
+- This page will not be deployed
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -99,9 +99,17 @@ To get a local copy up and running, follow these steps.
 ### Setup <a name="setup"></a>
 Open the terminal and clone the project
 ```
- git clone git@github.com:MarcoAurelioAntonio/Appointment-Server-Side.git
- cd Appointment-Server-Side
+ git clone git@github.com:MarcoAurelioAntonio/Global-Academy-Server.git
+ cd Global-Academy-Server
 ```
+<!-- LIVE DEMO -->
+
+## 💻 Link to FrontEnd <a name="front-end"></a>
+
+- [Global-Academy-Client](https://github.com/MarcoAurelioAntonio/Global-Academy-Client.git)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ### Prerequisites <a name="prerequisites"></a>
 
@@ -125,7 +133,6 @@ Create Database
 ```
   rails db:create
   rails db:migrate
-  rails db:seed
 ```
 
 ### Usage <a name="usage"></a>
@@ -167,8 +174,9 @@ To run the project, execute the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Add styling]**
 - [ ] **[Add content]**
+- [ ] **[Make sure that the "Add item" and "Delete item" links are accessible only by users who are admins]**
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
@@ -177,7 +185,7 @@ To run the project, execute the following command:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/MarcoAurelioAntonio/Appointment-Server-Side/issues).
+Feel free to check the [issues page](https://github.com/MarcoAurelioAntonio/Global-Academy-Server/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
