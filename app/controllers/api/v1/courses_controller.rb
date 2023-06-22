@@ -3,12 +3,11 @@ class Api::V1::CoursesController < ApplicationController
 
   def index
     @courses = Course.all
-    render json: JSON.pretty_generate(@courses.as_json)
+    render json: CourseSerializer.new(@courses).serializable_hash[:data].map { |hash| hash[:attributes] }
   end
 
   def create
-    @new_course = Course.new(params.require(:course).permit(:name, :start_date, :end_date, :description,
-                                                            :course_type, :price))
+    @new_course = Course.new(course_params)
     @new_course.save!
     if @new_course.save
       render json: @new_course, status: :created
@@ -18,7 +17,8 @@ class Api::V1::CoursesController < ApplicationController
   end
 
   def show
-    render json: @course
+
+    render json: CourseSerializer.new(@course).serializable_hash[:data][:attributes]
   end
 
   def destroy
@@ -32,5 +32,10 @@ class Api::V1::CoursesController < ApplicationController
     @course = Course.find(params[:id])
   rescue ActiveRecord::RecordNotFound
     render json: { error: 'Course not found' }, status: :not_found
+  end
+
+  def course_params
+    params.require(:course).permit(:name, :start_date, :end_date, :description,
+                                   :course_type, :price, :image)
   end
 end
