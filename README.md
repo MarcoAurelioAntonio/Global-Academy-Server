@@ -148,10 +148,6 @@ To run the project, execute the following command:
 ```
 rspec ./spec/models  
 ```
- For controller test run:
- ```
- rails test
- ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
