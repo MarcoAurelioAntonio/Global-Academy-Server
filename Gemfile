@@ -89,3 +89,6 @@ gem 'faker'
 gem 'rswag'
 
 gem 'jsonapi-serializer', '~> 2.2'
+
+# Mail_form is used for send emails from contact form to a specific email.
+gem 'mail_form', '~> 1.10'
