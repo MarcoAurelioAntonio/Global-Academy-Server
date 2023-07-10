@@ -9,7 +9,7 @@ Rails.application.routes.draw do
       resources :users, only: [:index,:create,:show] do
         resources :reservations, only: [:index, :create]
       end
-      resources :courses, only: [:index, :show, :create, :destroy]
+      resources :courses, only: [:index, :show, :create, :update, :destroy]
     end
   end
 end

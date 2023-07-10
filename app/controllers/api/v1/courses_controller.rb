@@ -20,6 +20,15 @@ class Api::V1::CoursesController < ApplicationController
     render json: CourseSerializer.new(@course).serializable_hash[:data][:attributes]
   end
 
+  def update
+    @course = Course.find(params[:id])
+    if @course.update(course_params)
+      render json: @course, status: :ok
+    else
+      render json: @course.errors, status: :unprocessable_entity
+    end
+  end
+
   def destroy
     @course.destroy
     head :no_content
