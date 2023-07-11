@@ -1,14 +1,13 @@
 class Api::V1::ContactsController < ApplicationController
-  def new
-    @contact = Contact.new
-    render json: @contact
-
   def create
     @contact = Contact.new(contact_params)
-    @contact.request = request # this line is very important to allow deliver_later to work
-    if @contact.deliver_later # this puts the job to the ActiveJob queue
-      render json: @contact, status: :created
+    @contact.request = request
+
+    if @contact.deliver
+      # Mover el renderizado de la respuesta JSON después de que el correo se haya entregado exitosamente
+      head :created
     else
+      # Si el correo no se entrega correctamente, renderizar errores JSON
       render json: { errors: @contact.errors.full_messages }, status: :unprocessable_entity
     end
   end
