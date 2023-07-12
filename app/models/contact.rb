@@ -9,7 +9,7 @@ class Contact < MailForm::Base
     {
       subject: 'Contact Form Inquiry',
       to: 'gustavoporcilio@gmail.com',
-      from: %("#{name}" <#{email}>),
+      reply_to: "#{name} <#{email}>",
       body: "Message send it from web site:\n
              Message:\n
               #{message}\n\n\n\n
